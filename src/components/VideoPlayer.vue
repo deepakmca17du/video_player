@@ -23,7 +23,7 @@
             <p>{{video.creator}}</p>
             <p class="thumbnail-views">{{video.views}} Views</p>
           </div>
-        </div>  
+        </div>
       </div>
     </div>
   </div>
