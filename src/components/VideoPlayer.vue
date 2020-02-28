@@ -13,15 +13,17 @@
       </div>
     </div>
     <div class="video-list">
-      <div v-for="video in videos" :key="video.id" class="thumbnail" @click="selectVideo(video)">
-        <div class="thumbnail-image">
-          <img :src="video.image_thumbnail" />
-        </div>
-        <div class="thumbnail-info">
-          <h3>{{video.title}}</h3>
-          <p>{{video.creator}}</p>
-          <p class="thumbnail-views">{{video.views}} Views</p>
-        </div>
+      <div v-for="video in videos" :key="video.id" @click="selectVideo(video)">
+        <div v-if="video.id != currentVideo.id" class="thumbnail">
+          <div class="thumbnail-image">
+            <img :src="video.image_thumbnail" />
+          </div>
+          <div class="thumbnail-info">
+            <h3>{{video.title}}</h3>
+            <p>{{video.creator}}</p>
+            <p class="thumbnail-views">{{video.views}} Views</p>
+          </div>
+        </div>  
       </div>
     </div>
   </div>
